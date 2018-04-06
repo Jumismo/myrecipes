@@ -6,4 +6,6 @@ class Chef < ApplicationRecord
                     format: {with: VALID_EMAIL_REGEX},
                     uniqueness: {case_sensitive: false}
   
+  # Plural because recipes are many in this side
+  has_many :recipes
 end
